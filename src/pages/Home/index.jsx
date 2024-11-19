@@ -1,8 +1,10 @@
-import { FiPlus, FiSearch } from "react-icons/fi";
+import { FiPlus, FiSearch } from "react-icons/fi"
 import  {Container, Brand, Menu, Search, NewNote, Content} from './styles' 
 import { Header } from '../../components/Header'
 import { ButtonText } from '../../components/ButtonText'
-import { Input } from "../../components/Input";
+import { Input } from "../../components/Input"
+import {Section} from '../../components/Section'
+import { Notes } from "../../components/Notes"
 
 export function Home() {
     return (
@@ -28,7 +30,17 @@ export function Home() {
                 <span>Criar nota</span>
             </NewNote>
 
-            <Content/>
+            <Content>
+                <Section title="Minhas notas">
+                    <Notes data = {{
+                        title: "Introdução ao React", 
+                        tags: [
+                            {id: 1, name: "React"}, 
+                            {id: 2, name: "JS"}]
+                        }}
+                    />
+                </Section>
+            </Content>
 
         </Container>    
     )} 
