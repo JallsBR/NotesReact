@@ -23,6 +23,6 @@ export function Header() {
     )}
     
 Header.propTypes = {
-        title: PropTypes.string.isRequired,
+        title: PropTypes.string,
         loading: PropTypes.bool,
     };
